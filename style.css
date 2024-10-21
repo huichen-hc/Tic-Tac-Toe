@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&display=swap');
+
+:root{
+    --cell-border-color:rgba(99, 98, 102, 0.419);
+    --x-and-o-color:rgb(29, 106, 127);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(55deg, rgba(176, 151, 220, 0.78) 20%, rgb(187, 226, 206) 65%);
+    font-family: "Outfit",sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+ #game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10rem auto;
+    padding: auto;
+    
+    h1{
+        color: var(--x-and-o-color);
+        font-size: 3.5rem;
+    }
+
+    p{font-size: 1rem;
+        color: var(--x-and-o-color);
+        margin-bottom: 1.5rem;
+    }
+}
+
+#cells-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    color: var(--x-and-o-color);
+    border: 2px solid var(--cell-border-color);
+    
+}
+
+.cell{
+    width: 6rem;
+    height: 6rem;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-right: 2px solid var(--cell-border-color);
+    border-bottom: 2px solid var(--cell-border-color);
+    box-sizing: border-box; 
+}
+
+.cell:nth-child(3n) {
+    border-right: none;
+  }
+
+.cell:nth-child(n+7) {
+    border-bottom: none;
+  }
+
+#restart-btn{
+    border-radius: 10px;
+    border:none;
+    background-color: var(--cell-border-color);
+    color: var(--x-and-o-color);
+    font-size: 1rem;
+    font-family: "Outfit",sans-serif;
+    padding: 3px 10px;
+    margin-top: 2rem;
+}
+
+
