@@ -1,1 +1,1 @@
-This project is to make a Tic Tac Toe game that users can play in the browser.
+This project is to make a Tic Tac Toe game.
